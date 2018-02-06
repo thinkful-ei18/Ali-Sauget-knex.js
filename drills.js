@@ -27,12 +27,32 @@ process.stdout.write('\x1Bc');
 //   .limit(6)
 //   .then(results => console.log(results));
 
-knex
-  .select('id', 'name')
-  .from('resturants')
-  .where({ cuisine: 'Italian' })
-  .limit(10)
-  .then(results => console.log(results));
+// knex
+//   .select('id', 'name')
+//   .from('restaurants')
+//   .where({ cuisine: 'Italian' })
+//   .limit(10)
+//   .then(results => console.log(results));
+
+// knex
+//   .select()
+//   .from('restaurants')
+//   .where({ cuisine: 'Thai' })
+//   .count()
+//   .then(results => console.log(results));
+
+// knex
+//   .select()
+//   .from('restaurants')
+//   .count()
+//   .then(results => console.log(results));
+
+// knex
+//   .select()
+//   .from('restaurants')
+//   .where({ cuisine: 'Thai', address_zipcode: 11372})
+//   .count()
+//   .then(results => console.log(results));
 
 
 // Destroy the connection pool
