@@ -14,10 +14,18 @@ process.stdout.write('\x1Bc');
 //   .debug(true)
 //   .then(results => console.log(results));
 
-knex
-  .select()
-  .from('restaurants')
-  .then(console.log());
+// knex
+//   .select()
+//   .from('restaurants')
+//   .limit(6)
+//   .then(results => console.log(results));
+
+// knex
+//   .select()
+//   .from('restaurants')
+//   .where({cuisine: 'Italian'})
+//   .limit(6)
+//   .then(results => console.log(results));
 
 // Destroy the connection pool
 knex.destroy().then(() => {
