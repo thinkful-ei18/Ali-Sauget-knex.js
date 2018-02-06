@@ -74,33 +74,42 @@ process.stdout.write('\x1Bc');
 //   .then(results => console.log(results));
 
 // 
-knex('restaurants')
-  .returning(['id', 'name'])
-  .insert([{
-    name: 'Little Ceasers',
-    borough: 'Manhattan',
-    cuisine: 'Pizza',
-    address_building_number: '175',
-    address_street: 'Joe Drive',
-    address_zipcode: '11239'
-  },
-  {
-    name: 'Lil Ceasers',
-    borough: 'Manhattan',
-    cuisine: 'Pizza',
-    address_building_number: '176',
-    address_street: 'Ruth Drive',
-    address_zipcode: '11239'
-  },
-  {
-    name: 'Lol Ceasers',
-    borough: 'Manhattan',
-    cuisine: 'Pizza',
-    address_building_number: '177',
-    address_street: 'Lee Drive',
-    address_zipcode: '11239'
-  }])
-  .then(results => console.log(results));
+// knex('restaurants')
+//   .returning(['id', 'name'])
+//   .insert([{
+//     name: 'Little Ceasers',
+//     borough: 'Manhattan',
+//     cuisine: 'Pizza',
+//     address_building_number: '175',
+//     address_street: 'Joe Drive',
+//     address_zipcode: '11239'
+//   },
+//   {
+//     name: 'Lil Ceasers',
+//     borough: 'Manhattan',
+//     cuisine: 'Pizza',
+//     address_building_number: '176',
+//     address_street: 'Ruth Drive',
+//     address_zipcode: '11239'
+//   },
+//   {
+//     name: 'Lol Ceasers',
+//     borough: 'Manhattan',
+//     cuisine: 'Pizza',
+//     address_building_number: '177',
+//     address_street: 'Lee Drive',
+//     address_zipcode: '11239'
+//   }])
+//   .then(results => console.log(results));
+
+// knex
+//   .select()
+//   .from('restaurants')
+//   .where({ nyc_restaurant_id: 30191841})
+//   .update('name', 'DJ Reynolds Pub and Restaurant')
+//   .then(results => console.log(results));
+
+
 
 
 // Destroy the connection pool
