@@ -109,7 +109,17 @@ process.stdout.write('\x1Bc');
 //   .update('name', 'DJ Reynolds Pub and Restaurant')
 //   .then(results => console.log(results));
 
+// knex('restaurants')
+//   .where({id: 10})
+//   .del()
+//   // .then(results => console.log(results));
 
+
+knex
+  .select()
+  .from('restaurants')
+  .limit(10)
+  .then(results => console.log(results));
 
 
 // Destroy the connection pool
