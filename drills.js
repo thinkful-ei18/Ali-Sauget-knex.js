@@ -7,13 +7,17 @@ const knex = require('knex')(DATABASE);
 process.stdout.write('\x1Bc');
 
 // Sample select 
+// knex
+//   .select()
+//   .from('restaurants')
+//   .limit(5)
+//   .debug(true)
+//   .then(results => console.log(results));
+
 knex
   .select()
   .from('restaurants')
-  .limit(2)
-  .debug(true)
-  .then(results => console.log(results));
-
+  .then(console.log());
 
 // Destroy the connection pool
 knex.destroy().then(() => {
