@@ -109,15 +109,16 @@ process.stdout.write('\x1Bc');
 //   .update('name', 'DJ Reynolds Pub and Restaurant')
 //   .then(results => console.log(results));
 
-// knex('restaurants')
-//   .where({id: 10})
+// knex('grades')
+//   .where('id', 10)
 //   .del()
+//   .then(console.log);
 //   // .then(results => console.log(results));
 
 
 knex
   .select()
-  .from('restaurants')
+  .from('grades')
   .limit(10)
   .then(results => console.log(results));
 
