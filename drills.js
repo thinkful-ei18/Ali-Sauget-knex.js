@@ -29,7 +29,7 @@ process.stdout.write('\x1Bc');
 
 knex
   .select('id', 'name')
-  .from('resturants')
+  .from('restaurants')
   .where({ cuisine: 'Italian' })
   .limit(10)
   .then(results => console.log(results));
